@@ -1,5 +1,7 @@
 from typing import List
 
+TREE = "#"
+
 
 def read_input():
     values = []
@@ -19,8 +21,8 @@ def get_tree_count(right: int, down: int, forest: List[str]) -> int:
     y = 0
     while y < forest_length - 1:
         x = (x + right) % line_length
-        y += 1
-        if forest[y][x] == "#":
+        y += down
+        if forest[y][x] == TREE:
             tree_count += 1
 
     return tree_count
