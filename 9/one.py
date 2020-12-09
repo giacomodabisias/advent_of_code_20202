@@ -17,6 +17,7 @@ def read_input():
 
 
 def is_valid(number, window):
+    # This just works since there are no repeated numbers in the window :D
     values = set(window)
     return find_double_sum(values, number)
 
